@@ -6,28 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Samael Medina</title>
     <!-- * Hoja de estilos CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="menu.css">
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
     <!-- & Animate.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body class="bg-slate-900 text-white p-0">
     <!-- * Inicio de navegacion-->
-    <header class="flex justify-between pl-10 py-3 sticky top-0 bg-slate-800 sm:py-6">
+    <!-- <header class="flex justify-between pl-10 py-3 sticky top-0 bg-slate-800 sm:py-6">
         <h1 class="text-3xl text-gray-100">S <span class=" text-cyan-400">M</span> </h1>
         
         <img src="sources/application-menu.svg" alt="" class="block h-8 mx-auto absolute right-5" id="button">
         
 
-    </header>        
-    <nav class="h-full bg-slate-900 w-full hidden transition-all fixed" id="menu">
+    </header>         -->
+    <!-- <nav class="h-full bg-slate-900 w-full hidden transition-all fixed" id="menu">
         <ul class="flex text-xl sm:text-3xl justify-around text-center flex-col h-4/5">
             <li><a href="#" class="hover:text-blue-300 md:text-2xl">About me</a></li>
             <li><a href="#" class="hover:text-blue-300 md:text-2xl">Skills</a></li>
             <li><a href="#" class="hover:text-blue-300 md:text-2xl">Portfolio</a></li>
             <li><a href="#" class="hover:text-blue-300 md:text-2xl">Contact</a></li>
         </ul>
+    </nav> -->
+    <nav class="bg-slate-800">
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <a href="#" class="enlace">
+            <h1 class="text-3xl text-gray-100">S <span class=" text-cyan-400">M</span> </h1>
+        </a>
+        <ul class="bg-slate-900 md:bg-slate-800">
+            <li><a class="active text-xl" href="#">Inicio</a></li>
+            <li><a class="text-lg" href="#">Nosotros</a></li>
+            <li><a class="text-lg" href="#">Servicios</a></li>
+            <li><a class="text-lg" href="#">Portafolio</a></li>
+            <li><a class="text-lg" href="#">Contacto</a></li>
+        </ul>
     </nav>
-
 
     <!-- & Sobre mi -->
     <section class="w-full mx-auto mt-10">
