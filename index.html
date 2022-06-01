@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="menu.css">
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
     <!-- & Animate.css -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body class="bg-slate-900 text-white p-0">
@@ -54,7 +55,7 @@
                 <p class="text-justify text-lg p-5 text-sky-200">
                 Entuciasta con ganas de nunca para de aprender, queriendo solucionar problemas de manera rapida y precisa, investigando cualquier tema que sea necesario para llegar a una solucion, siempre con metas de crecimiento tanto para mi como para la empresa. <br>
                 </p>
-                <a href="" class="block mx-auto text-center w-36 py-1 rounded-full bg-sky-500 text-white active:bg-sky-600 px-2">Descarga Mi CV</a>
+                <a href="" class="block mx-auto text-center w-36 py-1 rounded-full bg-sky-500 text-white active:bg-sky-600 px-2 mb-2">Descarga Mi CV</a>
             </div>
             
             <img src="https://cdn-icons-png.flaticon.com/512/121/121693.png" alt="Samael Medina" class="mx-auto w-3/4 w-1/2 md:w-3/4">
@@ -155,7 +156,7 @@
     <!-- & Contact -->
     <section class="w-full text-center bg-black mt-10">
         <strong class="block text-center p-5 text-3xl text-cyan-500">Contact</strong>
-        <form action="#" class="md:w-4/5 mx-auto py-5">
+        <form action="#" class="md:w-4/5 mx-auto py-5" id="form">
             <div>
                 <textarea class="w-4/5 bg-transparent text-cyan-400 sm:h-28" placeholder="Mensaje"></textarea>
                 <div>
@@ -164,7 +165,7 @@
                     <input type="tel" class="bg-transparent w-4/5 text-cyan-400" placeholder="Telefono">
                 </div>
             </div>
-            <button class="rounded-full border border-sky-400 active:bg-sky-500 px-8 py-1 mt-5">Enviar</button>
+            <button class="rounded-full border border-sky-400 active:bg-sky-500 px-8 py-1 mt-5" id="button">Enviar</button>
         </form>
     </section>
     
