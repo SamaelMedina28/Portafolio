@@ -30,25 +30,25 @@
             <li><a href="#" class="hover:text-blue-300 md:text-2xl">Contact</a></li>
         </ul>
     </nav> -->
-    <nav class="bg-slate-800">
+    <nav class="bg-slate-800 sticky top-0">
         <input type="checkbox" id="check">
         <label for="check" class="checkbtn">
-            <i class="fas fa-bars"></i>
+            <i class="fas fa-bars text-sky-200"></i>
         </label>
         <a href="#" class="enlace">
             <h1 class="text-3xl text-sky-100">S <span class=" text-cyan-400">M</span> </h1>
         </a>
         <ul class="bg-slate-900 md:bg-slate-800">
             <li><a class="active text-xl" href="#">Main</a></li>
-            <li><a class="text-lg text-sky-100" href="#">Technologies</a></li>
-            <li><a class="text-lg text-sky-100" href="#">Projects</a></li>
-            <li><a class="text-lg text-sky-100" href="#">Skills</a></li>
-            <li><a class="text-lg text-sky-100" href="#">Contact</a></li>
+            <li><a class="text-lg text-sky-100" href="#tec">Technologies</a></li>
+            <li><a class="text-lg text-sky-100" href="#pro">Projects</a></li>
+            <li><a class="text-lg text-sky-100" href="#skills">Skills</a></li>
+            <li><a class="text-lg text-sky-100" href="#cont">Contact</a></li>
         </ul>
     </nav>
 
     <!-- & Sobre mi -->
-    <section class="w-full mx-auto mt-10">
+    <section class="w-full mx-auto mt-10" id="main">
         <strong class="block text-center text-3xl text-cyan-500">About Me</strong>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:w-4/5 mx-auto">
             <div>
@@ -58,13 +58,13 @@
                 <a href="sources/Aziel-Samael-Medina-Galvan (2).pdf" target="_blank" class="block mx-auto text-center w-36 py-1 rounded-full bg-sky-500 text-white active:bg-sky-600 px-2 mb-2">Descarga Mi CV</a>
             </div>
             
-            <img src="https://cdn-icons-png.flaticon.com/512/121/121693.png" alt="Samael Medina" class="mx-auto w-3/4 w-1/2 md:w-3/4">
+            <img src="https://cdn-icons-png.flaticon.com/512/121/121693.png" alt="Samael Medina" class="mx-auto w-3/4 w-1/2 md:w-3/4 lg:max-w-[280px]">
         </div>
     </section>
 
 
     <!-- & Skills -->
-    <section class="w-full p-3 mx-auto mt-10 text-center bg-black pb-10">
+    <section class="w-full p-3 mx-auto mt-10 text-center bg-black pb-10" id="tec">
         <strong class="block text-center p-5 text-3xl text-cyan-500">Technologies</strong>
         <div class=" mx-auto grid grid-cols-3 gap-y-10 gap-x-5 sm:grid-cols-4">
             <div><img class="mx-auto w-3/4 max-w-[130px]" src="sources/HTML.svg" alt="">
@@ -83,7 +83,7 @@
     </section>
 
     <!-- & Portafolio de trabajos -->
-    <section class="text-center w-full">
+    <section class="text-center w-full" id="pro">
         <strong class="block text-center p-5 text-3xl text-cyan-500">Some projects</strong>
         <article class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             <div class="w-72 rounded-md p-5 border border-slate-400 mx-auto">
@@ -124,33 +124,33 @@
 
 
 
-    <section class="w-full p-3 mx-auto mt-10 text-center">
+    <section class="w-full p-3 mx-auto mt-10 text-center" id="skills">
         <strong class="block text-center p-5 text-3xl text-cyan-500">Skills</strong>
-        <article class="grid grid-cols-3 gap-y-10 w-4/5 mx-auto p-2 gap-x-5 text-lg">
-            <li class="text-sky-200">Manejo de directivas de grupo</li>
-            <li class="text-sky-200">Manejo de office 365</li>
-            <li class="text-sky-200">Instalacion de redes</li>
-            <li class="text-sky-200">Mantenimiento de equipo de computo</li>
-            <li class="text-sky-200">Manejo de bases de datos</li>
-            <li class="text-sky-200">Centro de Administracion de office 365</li>
-            <li class="text-sky-200">Buscar soluciones o investigar temas para encontrar la mejor opcion a un problema</li>
-            <li class="text-sky-200">Administracion, control y elavoraciones de planes para equipos de trabajo</li>
-            <li class="text-sky-200">Ganas de nunca parar de aprender</li>
-            <li class="text-sky-200">Conocimiento basico sobre telecomunicaciones</li>
-            <li class="text-sky-200">Trabajo en equipo</li>
-            <li class="text-sky-200">Instalacion de equipo de computo</li>
+        <article class="grid grid-cols-1 gap-y-5 w-full mx-auto p-2 gap-x-5 text-lg sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            <li class="text-sky-200 bg-slate-800 py-2 rounded-md">Manejo de directivas de grupo</li>
+            <li class="text-sky-200 bg-slate-800 py-2 rounded-md">Manejo de office 365</li>
+            <li class="text-sky-200 bg-slate-800 py-2 rounded-md">Instalacion de redes</li>
+            <li class="text-sky-200 bg-slate-800 py-2 rounded-md">Mantenimiento de equipo de computo</li>
+            <li class="text-sky-200 bg-slate-800 py-2 rounded-md">Manejo de bases de datos</li>
+            <li class="text-sky-200 bg-slate-800 py-2 rounded-md">Centro de Administracion de office 365</li>
+            <li class="text-sky-200 bg-slate-800 py-2 rounded-md">Buscar soluciones o investigar temas para encontrar la mejor opcion a un problema</li>
+            <li class="text-sky-200 bg-slate-800 py-2 rounded-md">Administracion, control y elavoraciones de planes para equipos de trabajo</li>
+            <li class="text-sky-200 bg-slate-800 py-2 rounded-md">Ganas de nunca parar de aprender</li>
+            <li class="text-sky-200 bg-slate-800 py-2 rounded-md">Conocimiento basico sobre telecomunicaciones</li>
+            <li class="text-sky-200 bg-slate-800 py-2 rounded-md">Trabajo en equipo</li>
+            <li class="text-sky-200 bg-slate-800 py-2 rounded-md">Instalacion de equipo de computo</li>
         </article>
     </section>
     <!-- & Contact -->
-    <section class="w-full text-center bg-black mt-10">
+    <section class="w-full text-center bg-black mt-10" id="cont">
         <strong class="block text-center p-5 text-3xl text-cyan-500">Contact</strong>
         <form action="#" class="md:w-4/5 mx-auto py-5" id="form">
             <div>
-                <textarea class="w-4/5 bg-transparent text-cyan-400 sm:h-28" placeholder="Mensaje"></textarea>
+                <textarea class="w-4/5 bg-transparent text-cyan-400 sm:h-28 rounded-sm" placeholder="Mensaje"></textarea>
                 <div>
-                    <input type="text" class="bg-transparent w-4/5 text-cyan-400 mt-4" placeholder="Nombre">
-                    <input type="email" class="bg-transparent w-4/5 text-cyan-400 my-4" placeholder="Correo">
-                    <input type="tel" class="bg-transparent w-4/5 text-cyan-400" placeholder="Telefono">
+                    <input type="text" class="bg-transparent w-4/5 text-cyan-400 mt-4 rounded-sm" placeholder="Nombre">
+                    <input type="email" class="bg-transparent w-4/5 text-cyan-400 my-4 rounded-sm" placeholder="Correo">
+                    <input type="tel" class="bg-transparent w-4/5 text-cyan-400 rounded-sm" placeholder="Telefono">
                 </div>
             </div>
             <button class="rounded-full border border-sky-400 active:bg-sky-500 px-8 py-1 mt-5" id="button">Enviar</button>
