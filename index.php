@@ -38,22 +38,22 @@
         <a href="#" class="enlace">
             <h1 class="text-3xl text-sky-100">S <span class=" text-cyan-400">M</span> </h1>
         </a>
-        <ul class="bg-slate-900 md:bg-slate-800">
-            <li><a class="active text-xl" href="#">Main</a></li>
-            <li><a class="text-lg text-sky-100" href="#tec">Technologies</a></li>
-            <li><a class="text-lg text-sky-100" href="#pro">Projects</a></li>
-            <li><a class="text-lg text-sky-100" href="#skills">Skills</a></li>
-            <li><a class="text-lg text-sky-100" href="#cont">Contact</a></li>
+        <ul class="bg-slate-900 md:bg-slate-800" id="hidden">
+            <li><a class="select active text-xl" href="#">Inicio</a></li>
+            <li><a class="select text-lg text-sky-100" href="#tec">Tecnologias</a></li>
+            <li><a class="select text-lg text-sky-100" href="#pro">Proyectos</a></li>
+            <li><a class="select text-lg text-sky-100" href="#skills">Skills</a></li>
+            <li><a class="select text-lg text-sky-100" href="#cont">Contacto</a></li>
         </ul>
     </nav>
 
     <!-- & Sobre mi -->
     <section class="w-full mx-auto mt-10" id="main">
-        <strong class="block text-center text-3xl text-cyan-500">About Me</strong>
+        <strong class="block text-center text-3xl text-cyan-500">Sobre mi</strong>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:w-4/5 mx-auto">
             <div>
                 <p class="text-justify text-lg p-5 text-sky-200">
-                Entuciasta con ganas de nunca para de aprender, queriendo solucionar problemas de manera rapida y precisa, investigando cualquier tema que sea necesario para llegar a una solucion, siempre con metas de crecimiento tanto para mi como para la empresa. <br>
+                Entuciasta con ganas de nunca parar de aprender, queriendo solucionar problemas de manera rapida y precisa, investigando cualquier tema que sea necesario para llegar a una solucion, siempre con metas de crecimiento tanto para mi como para la empresa. <br>
                 </p>
                 <a href="sources/Aziel-Samael-Medina-Galvan (2).pdf" target="_blank" class="block mx-auto text-center w-36 py-1 rounded-full bg-sky-500 text-white active:bg-sky-600 px-2 mb-2">Descarga Mi CV</a>
             </div>
@@ -65,7 +65,7 @@
 
     <!-- & Skills -->
     <section class="w-full p-3 mx-auto mt-10 text-center bg-black pb-10" id="tec">
-        <strong class="block text-center p-5 text-3xl text-cyan-500">Technologies</strong>
+        <strong class="block text-center p-5 text-3xl text-cyan-500">Tecnologias</strong>
         <div class=" mx-auto grid grid-cols-3 gap-y-10 gap-x-5 sm:grid-cols-4">
             <div><img class="mx-auto w-3/4 max-w-[130px]" src="sources/HTML.svg" alt="">
             <strong>HTML</strong></div>
@@ -84,7 +84,7 @@
 
     <!-- & Portafolio de trabajos -->
     <section class="text-center w-full" id="pro">
-        <strong class="block text-center p-5 text-3xl text-cyan-500">Some projects</strong>
+        <strong class="block text-center p-5 text-3xl text-cyan-500">Algunos proyectos</strong>
         <article class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             <div class="w-72 rounded-md p-5 border border-slate-400 mx-auto">
                 <img src="sources/office-work.svg" alt="" class="w-full">
@@ -143,14 +143,14 @@
     </section>
     <!-- & Contact -->
     <section class="w-full text-center bg-black mt-10" id="cont">
-        <strong class="block text-center p-5 text-3xl text-cyan-500">Contact</strong>
-        <form action="#" class="md:w-4/5 mx-auto py-5" id="form">
+        <strong class="block text-center p-5 text-3xl text-cyan-500">Contacto</strong>
+        <form action="index.php" class="md:w-4/5 mx-auto py-5" id="form" method="post">
             <div>
-                <textarea class="w-4/5 bg-transparent text-cyan-400 sm:h-28 rounded-sm" placeholder="Mensaje"></textarea>
+                <textarea name="txtMensaje" class="w-4/5 bg-transparent text-cyan-400 sm:h-28 rounded-sm" placeholder="Mensaje"></textarea>
                 <div>
-                    <input type="text" class="bg-transparent w-4/5 text-cyan-400 mt-4 rounded-sm" placeholder="Nombre">
-                    <input type="email" class="bg-transparent w-4/5 text-cyan-400 my-4 rounded-sm" placeholder="Correo">
-                    <input type="tel" class="bg-transparent w-4/5 text-cyan-400 rounded-sm" placeholder="Telefono">
+                    <input name="txtNombre" type="text" class="bg-transparent w-4/5 text-cyan-400 mt-4 rounded-sm" placeholder="Nombre">
+                    <input name="txtEmail" type="email" class="bg-transparent w-4/5 text-cyan-400 my-4 rounded-sm" placeholder="Correo">
+                    <input name="txtTelefono" type="tel" class="bg-transparent w-4/5 text-cyan-400 rounded-sm" placeholder="Telefono">
                 </div>
             </div>
             <button class="rounded-full border border-sky-400 active:bg-sky-500 px-8 py-1 mt-5" id="button">Enviar</button>
@@ -170,8 +170,36 @@
     </footer>
 
     <script src="main.js"></script>
-    <script>
-        new WOW().init();
-        </script>
 </body>
 </html>
+<?php 
+$txtNombre = "";
+$txtMensaje = "";
+$txtEmail = "";
+$txtTelefono = "";
+
+
+
+$servidor = "localhost"; // 127.0.0.1
+$usuario = "root";
+$password = "";
+
+if($_POST){
+    $txtNombre = $_POST["txtNombre"];
+    $txtMensaje = $_POST["txtMensaje"];
+    $txtEmail = $_POST["txtEmail"];
+    $txtTelefono = $_POST["txtTelefono"];
+    try {
+        $conexion = new PDO("mysql:host=$servidor;dbname=mensajes", $usuario, $password);
+        $conexion->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+        // echo "Conexion establecida";
+        $sql = "INSERT INTO `mensajes` (`id`, `mensaje`, `nombre`, `correo`, `telefono`) VALUES (NULL, '$txtMensaje', '$txtNombre', '$txtEmail', '$txtTelefono');";
+
+        $conexion->exec($sql);
+
+    } catch (PDOException $error) {
+        echo "Conexion erronea <br/> ".$error;
+    }
+
+}
+?>

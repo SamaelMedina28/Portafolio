@@ -1,7 +1,7 @@
 const form =  document.getElementById("form")
-
+const button = document.getElementsByClassName("select")
+const hidden = document.getElementById("check")
 form.addEventListener("submit",(e)=>{
-    e.preventDefault()
     Swal.fire({
         position: 'top-end',
         icon: 'success',
@@ -10,3 +10,10 @@ form.addEventListener("submit",(e)=>{
         timer: 1600
       })
 })
+for (let index = 0; index < button.length; index++) {
+  const element = button[index];
+  console.log(element)
+  element.addEventListener("click",()=>{
+    hidden.checked = false
+  })
+}

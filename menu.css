@@ -5,7 +5,7 @@
     list-style: none;
     box-sizing: border-box;
 }
-
+/* INSERT INTO `mensajes` (`id`, `mensaje`, `nombre`, `correo`, `telefono`) VALUES (NULL, 'sdasd', 'asdasd', 'sdad', 'dasd'); */
 nav{
     height: 80px;
     width: 100%;
@@ -90,4 +90,5 @@ li a.active, li a:hover{
     #check:checked ~ ul{
         left:0;
     }
+    
 }
