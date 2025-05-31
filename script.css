@@ -62,3 +62,71 @@
 .floating-object {
     animation: float 5s ease-in-out infinite;
 }
+
+
+/* Swiper */
+.swiper {
+    width: 100%;
+    padding: 40px 0 60px;
+    overflow: visible;
+}
+
+.swiper-slide {
+    height: auto;
+    opacity: 0.5;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: scale(0.95);
+}
+
+.swiper-slide-active {
+    opacity: 1;
+    transform: scale(1);
+    z-index: 1;
+}
+
+.swiper-pagination-bullet {
+    background: #64748b;
+    opacity: 0.5;
+    width: 12px;
+    height: 12px;
+    transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+    background: #3b82f6;
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #ffffff;
+    background: rgba(30, 41, 59, 0.8);
+    backdrop-filter: blur(8px);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    opacity: 0.7;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background: #3b82f6;
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none;
+    }
+}
