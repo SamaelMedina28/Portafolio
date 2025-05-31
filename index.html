@@ -12,7 +12,8 @@
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- Css -->
-    <link rel="stylesheet" href="script.css">
+    <link rel="stylesheet" href="css/script.css">
+    <link rel="stylesheet" href="css/projects.css">
 </head>
 
 <body class="bg-gradient-to-br from-slate-900 to-black text-white font-sans tracking-wide overflow-x-hidden ">
@@ -334,8 +335,293 @@
     </section>
 
     <!-- Proyectos -->
+    <section id="proyectos" class="py-20 px-6 md:px-12 max-w-7xl mx-auto relative overflow-hidden">
+        <!-- Efecto de fondo sutil -->
+        <div
+            class="absolute -bottom-1/4 -right-1/4 w-full h-1/2 bg-gradient-radial from-blue-500/5 to-transparent rounded-full opacity-30">
+        </div>
 
+        <div class="relative z-10">
+            <div class="text-center mb-16">
+                <span class="inline-block mb-4 text-blue-400 font-mono text-sm tracking-widest">MIS PROYECTOS</span>
+                <h2
+                    class="text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-200 via-blue-500 to-blue-600 animate-text-glow">
+                    Trabajos Recientes</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-blue-600 mx-auto rounded-full"></div>
+            </div>
 
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Proyecto 1 -->
+                <div class="project-item">
+                    <div class="project-card h-full border border-gray-700/50 hover:border-blue-500/50">
+                        <img src="src/prueba.png" alt="Sitio Web Empresarial" class="project-image">
+                        <div class="project-overlay">
+                            <h3 class="text-xl font-bold text-white mb-2">Sitio Web Empresarial</h3>
+                            <p class="text-gray-300 text-sm mb-4">Un sitio web moderno y receptivo para una empresa
+                                local, con diseño personalizado y optimizado para SEO.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="tech-tag bg-blue-500/20 text-blue-300">HTML5</span>
+                                <span class="tech-tag bg-purple-500/20 text-purple-300">CSS3</span>
+                                <span class="tech-tag bg-yellow-500/20 text-yellow-300">JavaScript</span>
+                            </div>
+                            <a href="#"
+                                class="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors group">
+                                Ver en GitHub <i
+                                    class="fas fa-external-link-alt ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Proyecto 2 -->
+                <div class="project-item">
+                    <div class="project-card h-full border border-gray-700/50 hover:border-blue-500/50">
+                        <img src="src/prueba.png" alt="Aplicación de Tareas" class="project-image">
+                        <div class="project-overlay">
+                            <h3 class="text-xl font-bold text-white mb-2">Aplicación de Tareas</h3>
+                            <p class="text-gray-300 text-sm mb-4">Aplicación web para gestión de tareas con
+                                almacenamiento local, filtros y modo oscuro.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="tech-tag bg-blue-500/20 text-blue-300">React</span>
+                                <span class="tech-tag bg-purple-500/20 text-purple-300">Tailwind</span>
+                                <span class="tech-tag bg-green-500/20 text-green-300">LocalStorage</span>
+                            </div>
+                            <a href="#"
+                                class="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors group">
+                                Ver en GitHub <i
+                                    class="fas fa-external-link-alt ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Proyecto 3 -->
+                <div class="project-item">
+                    <div class="project-card h-full border border-gray-700/50 hover:border-blue-500/50">
+                        <!-- imagen de prueba -->
+                        <img src="src/prueba.png" alt="API RESTful" class="project-image">
+                        <div class="project-overlay">
+                            <h3 class="text-xl font-bold text-white mb-2">API RESTful</h3>
+                            <p class="text-gray-300 text-sm mb-4">API RESTful para gestión de usuarios con autenticación
+                                JWT, documentación con Swagger.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="tech-tag bg-green-500/20 text-green-300">Node.js</span>
+                                <span class="tech-tag bg-yellow-500/20 text-yellow-300">Express</span>
+                                <span class="tech-tag bg-blue-500/20 text-blue-300">MongoDB</span>
+                                <span class="tech-tag bg-purple-500/20 text-purple-300">JWT</span>
+                            </div>
+                            <a href="#"
+                                class="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors group">
+                                Ver en GitHub <i
+                                    class="fas fa-external-link-alt ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Proyecto 4 -->
+                <div class="project-item">
+                    <div class="project-card h-full border border-gray-700/50 hover:border-blue-500/50">
+                        <!-- imagen de prueba -->
+                        <img src="src/prueba.png" alt="API RESTful" class="project-image">
+                        <div class="project-overlay">
+                            <h3 class="text-xl font-bold text-white mb-2">API RESTful</h3>
+                            <p class="text-gray-300 text-sm mb-4">API RESTful para gestión de usuarios con autenticación
+                                JWT, documentación con Swagger.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="tech-tag bg-green-500/20 text-green-300">Node.js</span>
+                                <span class="tech-tag bg-yellow-500/20 text-yellow-300">Express</span>
+                                <span class="tech-tag bg-blue-500/20 text-blue-300">MongoDB</span>
+                                <span class="tech-tag bg-purple-500/20 text-purple-300">JWT</span>
+                            </div>
+                            <a href="#"
+                                class="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors group">
+                                Ver en GitHub <i
+                                    class="fas fa-external-link-alt ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Proyecto 5 -->
+                <div class="project-item">
+                    <div class="project-card h-full border border-gray-700/50 hover:border-blue-500/50">
+                        <!-- imagen de prueba -->
+                        <img src="src/prueba.png" alt="API RESTful" class="project-image">
+                        <div class="project-overlay">
+                            <h3 class="text-xl font-bold text-white mb-2">API RESTful</h3>
+                            <p class="text-gray-300 text-sm mb-4">API RESTful para gestión de usuarios con autenticación
+                                JWT, documentación con Swagger.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="tech-tag bg-green-500/20 text-green-300">Node.js</span>
+                                <span class="tech-tag bg-yellow-500/20 text-yellow-300">Express</span>
+                                <span class="tech-tag bg-blue-500/20 text-blue-300">MongoDB</span>
+                                <span class="tech-tag bg-purple-500/20 text-purple-300">JWT</span>
+                            </div>
+                            <a href="#"
+                                class="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors group">
+                                Ver en GitHub <i
+                                    class="fas fa-external-link-alt ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Proyecto 6 -->
+                <div class="project-item">
+                    <div class="project-card h-full border border-gray-700/50 hover:border-blue-500/50">
+                        <!-- imagen de prueba -->
+                        <img src="src/prueba.png" alt="API RESTful" class="project-image">
+                        <div class="project-overlay">
+                            <h3 class="text-xl font-bold text-white mb-2">API RESTful</h3>
+                            <p class="text-gray-300 text-sm mb-4">API RESTful para gestión de usuarios con autenticación
+                                JWT, documentación con Swagger.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="tech-tag bg-green-500/20 text-green-300">Node.js</span>
+                                <span class="tech-tag bg-yellow-500/20 text-yellow-300">Express</span>
+                                <span class="tech-tag bg-blue-500/20 text-blue-300">MongoDB</span>
+                                <span class="tech-tag bg-purple-500/20 text-purple-300">JWT</span>
+                            </div>
+                            <a href="#"
+                                class="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors group">
+                                Ver en GitHub <i
+                                    class="fas fa-external-link-alt ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Proyecto 7 -->
+                <div class="project-item">
+                    <div class="project-card h-full border border-gray-700/50 hover:border-blue-500/50">
+                        <img src="src/prueba.png" alt="Sitio Web Empresarial" class="project-image">
+                        <div class="project-overlay">
+                            <h3 class="text-xl font-bold text-white mb-2">Sitio Web Empresarial</h3>
+                            <p class="text-gray-300 text-sm mb-4">Un sitio web moderno y receptivo para una empresa
+                                local, con diseño personalizado y optimizado para SEO.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="tech-tag bg-blue-500/20 text-blue-300">HTML5</span>
+                                <span class="tech-tag bg-purple-500/20 text-purple-300">CSS3</span>
+                                <span class="tech-tag bg-yellow-500/20 text-yellow-300">JavaScript</span>
+                            </div>
+                            <a href="#"
+                                class="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors group">
+                                Ver en GitHub <i
+                                    class="fas fa-external-link-alt ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Proyecto 8 -->
+                <div class="project-item">
+                    <div class="project-card h-full border border-gray-700/50 hover:border-blue-500/50">
+                        <img src="src/prueba.png" alt="Aplicación de Tareas" class="project-image">
+                        <div class="project-overlay">
+                            <h3 class="text-xl font-bold text-white mb-2">Aplicación de Tareas</h3>
+                            <p class="text-gray-300 text-sm mb-4">Aplicación web para gestión de tareas con
+                                almacenamiento local, filtros y modo oscuro.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="tech-tag bg-blue-500/20 text-blue-300">React</span>
+                                <span class="tech-tag bg-purple-500/20 text-purple-300">Tailwind</span>
+                                <span class="tech-tag bg-green-500/20 text-green-300">LocalStorage</span>
+                            </div>
+                            <a href="#"
+                                class="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors group">
+                                Ver en GitHub <i
+                                    class="fas fa-external-link-alt ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Proyecto 9 -->
+                <div class="project-item">
+                    <div class="project-card h-full border border-gray-700/50 hover:border-blue-500/50">
+                        <!-- imagen de prueba -->
+                        <img src="src/prueba.png" alt="API RESTful" class="project-image">
+                        <div class="project-overlay">
+                            <h3 class="text-xl font-bold text-white mb-2">API RESTful</h3>
+                            <p class="text-gray-300 text-sm mb-4">API RESTful para gestión de usuarios con autenticación
+                                JWT, documentación con Swagger.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="tech-tag bg-green-500/20 text-green-300">Node.js</span>
+                                <span class="tech-tag bg-yellow-500/20 text-yellow-300">Express</span>
+                                <span class="tech-tag bg-blue-500/20 text-blue-300">MongoDB</span>
+                                <span class="tech-tag bg-purple-500/20 text-purple-300">JWT</span>
+                            </div>
+                            <a href="#"
+                                class="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors group">
+                                Ver en GitHub <i
+                                    class="fas fa-external-link-alt ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Proyecto 10 -->
+                <div class="project-item">
+                    <div class="project-card h-full border border-gray-700/50 hover:border-blue-500/50">
+                        <!-- imagen de prueba -->
+                        <img src="src/prueba.png" alt="API RESTful" class="project-image">
+                        <div class="project-overlay">
+                            <h3 class="text-xl font-bold text-white mb-2">API RESTful</h3>
+                            <p class="text-gray-300 text-sm mb-4">API RESTful para gestión de usuarios con autenticación
+                                JWT, documentación con Swagger.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="tech-tag bg-green-500/20 text-green-300">Node.js</span>
+                                <span class="tech-tag bg-yellow-500/20 text-yellow-300">Express</span>
+                                <span class="tech-tag bg-blue-500/20 text-blue-300">MongoDB</span>
+                                <span class="tech-tag bg-purple-500/20 text-purple-300">JWT</span>
+                            </div>
+                            <a href="#"
+                                class="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors group">
+                                Ver en GitHub <i
+                                    class="fas fa-external-link-alt ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Proyecto 11 -->
+                <div class="project-item">
+                    <div class="project-card h-full border border-gray-700/50 hover:border-blue-500/50">
+                        <!-- imagen de prueba -->
+                        <img src="src/prueba.png" alt="API RESTful" class="project-image">
+                        <div class="project-overlay">
+                            <h3 class="text-xl font-bold text-white mb-2">API RESTful</h3>
+                            <p class="text-gray-300 text-sm mb-4">API RESTful para gestión de usuarios con autenticación
+                                JWT, documentación con Swagger.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="tech-tag bg-green-500/20 text-green-300">Node.js</span>
+                                <span class="tech-tag bg-yellow-500/20 text-yellow-300">Express</span>
+                                <span class="tech-tag bg-blue-500/20 text-blue-300">MongoDB</span>
+                                <span class="tech-tag bg-purple-500/20 text-purple-300">JWT</span>
+                            </div>
+                            <a href="#"
+                                class="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors group">
+                                Ver en GitHub <i
+                                    class="fas fa-external-link-alt ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Proyecto 12 -->
+                <div class="project-item">
+                    <div class="project-card h-full border border-gray-700/50 hover:border-blue-500/50">
+                        <!-- imagen de prueba -->
+                        <img src="src/prueba.png" alt="API RESTful" class="project-image">
+                        <div class="project-overlay">
+                            <h3 class="text-xl font-bold text-white mb-2">API RESTful</h3>
+                            <p class="text-gray-300 text-sm mb-4">API RESTful para gestión de usuarios con autenticación
+                                JWT, documentación con Swagger.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="tech-tag bg-green-500/20 text-green-300">Node.js</span>
+                                <span class="tech-tag bg-yellow-500/20 text-yellow-300">Express</span>
+                                <span class="tech-tag bg-blue-500/20 text-blue-300">MongoDB</span>
+                                <span class="tech-tag bg-purple-500/20 text-purple-300">JWT</span>
+                            </div>
+                            <a href="#"
+                                class="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors group">
+                                Ver en GitHub <i
+                                    class="fas fa-external-link-alt ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Inicialización de Swiper -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
