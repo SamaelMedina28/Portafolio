@@ -69,3 +69,38 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 });
+
+// Mover la variable fuera de la función para que mantenga su estado
+let proyectosMostrados = false;
+
+document.getElementById("verMasBtn").addEventListener("click", function () {
+  const btn = this;
+
+  if (!proyectosMostrados) {
+    // Mostrar más proyectos
+    document.querySelectorAll(".project-item.hidden").forEach((item) => {
+      item.classList.remove("hidden");
+    });
+    btn.textContent = "Ver menos proyectos";
+    btn.classList.remove("bg-blue-600");
+    btn.classList.add("bg-red-600");
+  } else {
+    // Ocultar proyectos adicionales
+    // Primero, necesitamos una forma de identificar qué proyectos están ocultos
+    // Vamos a asumir que los proyectos adicionales tienen la clase 'hidden' por defecto
+    // y que los primeros 6 (por ejemplo) son los que se muestran inicialmente
+    const todosLosProyectos = document.querySelectorAll(".project-item");
+    todosLosProyectos.forEach((item, index) => {
+      if (index >= 6) {
+        // Ajusta este número según cuántos proyectos quieras mostrar inicialmente
+        item.classList.add("hidden");
+      }
+    });
+    btn.textContent = "Ver más proyectos";
+    btn.classList.remove("bg-red-600");
+    btn.classList.add("bg-blue-600");
+  }
+
+  // Invertir el estado
+  proyectosMostrados = !proyectosMostrados;
+});
