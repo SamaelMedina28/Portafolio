@@ -24,39 +24,85 @@
                 <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Logo">
                 <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">DevCode</span>
             </a>
-            <div class="flex md:order-2 space-x-3">
-                <a href="#contacto" class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-800 font-medium rounded-lg text-sm px-4 py-2 text-center transition-colors duration-200">
+            <div class="flex md:order-2 space-x-4 items-center">
+                <a href="#contacto" class="hidden md:inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20">
+                    <i class="fas fa-paper-plane mr-2"></i>
                     Contacto
                 </a>
-                <button data-collapse-toggle="navbar-sticky" type="button"
-                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-400 rounded-lg md:hidden hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-600"
-                    aria-controls="navbar-sticky" aria-expanded="false">
-                    <span class="sr-only">Abrir menú</span>
-                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
+                <!-- Botón del menú móvil -->
+                <button id="mobile-menu-button" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-gray-400 rounded-lg md:hidden hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-600 transition-transform duration-300" aria-expanded="false">
+                    <span class="sr-only">Abrir menú principal</span>
+                    <svg class="w-6 h-6" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
                     </svg>
                 </button>
             </div>
-            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
-                <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium rounded-lg bg-gray-800 md:space-x-8 md:flex-row md:mt-0 md:border-0 md:bg-gray-900">
+
+            <!-- Menú móvil -->
+            <div id="mobile-menu" class="hidden w-full md:hidden">
+                <div class="px-2 pt-2 pb-3 space-y-1 bg-gray-800 rounded-lg shadow-lg mt-2 border border-gray-700">
+                    <a href="#" class="flex items-center px-4 py-3 text-base font-medium text-white bg-gray-900 rounded-md group" aria-current="page">
+                        <i class="fas fa-home w-5 h-5 mr-3 text-blue-400"></i>
+                        Inicio
+                        <span class="ml-auto inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-blue-600 rounded-full">
+                            <i class="fas fa-chevron-right text-xs"></i>
+                        </span>
+                    </a>
+                    <a href="#sobre-mi" class="flex items-center px-4 py-3 text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 rounded-md group transition-colors duration-200">
+                        <i class="fas fa-user w-5 h-5 mr-3 text-blue-400"></i>
+                        Sobre mí
+                        <span class="ml-auto inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-blue-600 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                            <i class="fas fa-chevron-right text-xs"></i>
+                        </span>
+                    </a>
+                    <a href="#skills" class="flex items-center px-4 py-3 text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 rounded-md group transition-colors duration-200">
+                        <i class="fas fa-code w-5 h-5 mr-3 text-blue-400"></i>
+                        Skills
+                        <span class="ml-auto inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-blue-600 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                            <i class="fas fa-chevron-right text-xs"></i>
+                        </span>
+                    </a>
+                    <a href="#proyectos" class="flex items-center px-4 py-3 text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 rounded-md group transition-colors duration-200">
+                        <i class="fas fa-folder-open w-5 h-5 mr-3 text-blue-400"></i>
+                        Proyectos
+                        <span class="ml-auto inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-blue-600 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                            <i class="fas fa-chevron-right text-xs"></i>
+                        </span>
+                    </a>
+                    <div class="pt-2 px-4">
+                        <a href="#contacto" class="flex items-center justify-center w-full px-4 py-2.5 text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20">
+                            <i class="fas fa-paper-plane mr-2"></i>
+                            Contactar ahora
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Menú de escritorio -->
+            <div class="hidden md:flex items-center justify-between w-auto" id="desktop-menu">
+                <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium rounded-lg md:space-x-8 md:flex-row md:mt-0 md:border-0">
                     <li>
-                        <a href="#" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-400 md:p-0" aria-current="page">
+                        <a href="#" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-400 md:p-0 group relative" aria-current="page">
                             Inicio
+                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
                         </a>
                     </li>
                     <li>
-                        <a href="#sobre-mi" class="block py-2 px-3 text-gray-300 rounded hover:bg-gray-700 md:hover:bg-transparent md:hover:text-blue-400 md:p-0 transition-colors duration-200">
+                        <a href="#sobre-mi" class="block py-2 px-3 text-gray-300 rounded hover:bg-gray-700 md:hover:bg-transparent md:hover:text-blue-400 md:p-0 transition-colors duration-200 group relative">
                             Sobre mí
+                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
                         </a>
                     </li>
                     <li>
-                        <a href="#skills" class="block py-2 px-3 text-gray-300 rounded hover:bg-gray-700 md:hover:bg-transparent md:hover:text-blue-400 md:p-0 transition-colors duration-200">
+                        <a href="#skills" class="block py-2 px-3 text-gray-300 rounded hover:bg-gray-700 md:hover:bg-transparent md:hover:text-blue-400 md:p-0 transition-colors duration-200 group relative">
                             Skills
+                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
                         </a>
                     </li>
                     <li>
-                        <a href="#proyectos" class="block py-2 px-3 text-gray-300 rounded hover:bg-gray-700 md:hover:bg-transparent md:hover:text-blue-400 md:p-0 transition-colors duration-200">
+                        <a href="#proyectos" class="block py-2 px-3 text-gray-300 rounded hover:bg-gray-700 md:hover:bg-transparent md:hover:text-blue-400 md:p-0 transition-colors duration-200 group relative">
                             Proyectos
+                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
                         </a>
                     </li>
                 </ul>
@@ -535,6 +581,7 @@
 
     <!-- Inicialización de Swiper -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
     <script src="script.js"></script>
 </body>
