@@ -177,4 +177,83 @@ document.addEventListener("DOMContentLoaded", function () {
       proyectosMostrados = !proyectosMostrados;
     });
   }
+
+  // Manejo del formulario de contacto
+  const contactForm = document.getElementById('contact-form');
+  const formStatus = document.getElementById('form-status');
+
+  if (contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      // Deshabilitar el botón de envío
+      const submitBtn = contactForm.querySelector('button[type="submit"]');
+      const originalBtnText = submitBtn.innerHTML;
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Enviando...';
+      
+      // Obtener los datos del formulario
+      const formData = new FormData(contactForm);
+      
+      try {
+        // Enviar el formulario a Formspree
+        const response = await fetch(contactForm.action, {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+        
+        // Manejar la respuesta
+        if (response.ok) {
+          // Éxito: mostrar mensaje de éxito
+          formStatus.innerHTML = '<div class="text-green-400"><i class="fas fa-check-circle mr-2"></i>¡Mensaje enviado con éxito! Me pondré en contacto contigo pronto.</div>';
+          contactForm.reset();
+        } else {
+          // Error: mostrar mensaje de error
+          const data = await response.json().catch(() => ({}));
+          throw new Error(data.error || 'Error al enviar el mensaje. Por favor, inténtalo de nuevo más tarde.');
+        }
+      } catch (error) {
+        // Mostrar mensaje de error
+        formStatus.innerHTML = `<div class="text-red-400"><i class="fas fa-exclamation-circle mr-2"></i>${error.message || 'Error al enviar el mensaje. Por favor, inténtalo de nuevo más tarde.'}</div>`;
+        console.error('Error al enviar el formulario:', error);
+      } finally {
+        // Restaurar el botón
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalBtnText;
+        
+        // Desvanecer el mensaje después de 5 segundos
+        setTimeout(() => {
+          formStatus.style.opacity = '0';
+          setTimeout(() => {
+            formStatus.innerHTML = '';
+            formStatus.style.opacity = '1';
+          }, 500);
+        }, 5000);
+      }
+    });
+  }
+
+  // Efecto de carga suave para los elementos de la sección de contacto
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('opacity-100', 'translate-y-0');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('#contacto > div > *').forEach((el, index) => {
+    el.classList.add('opacity-0', 'translate-y-6');
+    el.style.transition = `opacity 0.5s ease-out ${index * 0.1}s, transform 0.5s ease-out ${index * 0.1}s`;
+    observer.observe(el);
+  });
 });
