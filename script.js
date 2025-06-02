@@ -229,9 +229,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.querySelectorAll(".project-item.hidden").forEach((item) => {
           item.classList.remove("hidden");
         });
-        btn.textContent = "Ver menos proyectos";
-        btn.classList.remove("bg-blue-600");
-        btn.classList.add("bg-red-600");
+        btn.textContent = "Ver menos";
       } else {
         // Ocultar proyectos adicionales
         const todosLosProyectos = document.querySelectorAll(".project-item");
@@ -240,9 +238,7 @@ document.addEventListener("DOMContentLoaded", function () {
             item.classList.add("hidden");
           }
         });
-        btn.textContent = "Ver más proyectos";
-        btn.classList.remove("bg-red-600");
-        btn.classList.add("bg-blue-600");
+        btn.textContent = "Ver más";
       }
 
       // Invertir el estado
