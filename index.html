@@ -19,8 +19,36 @@
     <!--! Navbar -->
     <nav class="bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-700">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-            <a href="#" class="flex items-center space-x-3">
-                <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Logo">
+            <a href="#" class="flex items-center space-x-3  aria-label="Logo">
+                <svg width="44" height="44" viewBox="0 0 491 323" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Definición del gradiente lineal -->
+                    <defs>
+                        <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="100%" gradientUnits="userSpaceOnUse">
+                            <stop offset="0%" stop-color="#A78BFA" stop-opacity="1" />
+                            <stop offset="22%" stop-color="#818CF8" stop-opacity="1" />
+                            <stop offset="30%" stop-color="#60A5FA" stop-opacity="1" />
+                            <stop offset="90%" stop-color="#3B82F6" stop-opacity="1" />
+                            <stop offset="100%" stop-color="#101828" stop-opacity="1" />
+                        </linearGradient>
+                    </defs>
+                
+                    <!-- Elementos con el gradiente aplicado -->
+                    <rect y="10" width="55" height="313" rx="5" fill="url(#blueGradient)" />
+                    <path
+                        d="M225.699 163.046C227.546 164.978 227.546 168.022 225.699 169.954L81.6149 320.731C78.4994 323.991 73 321.786 73 317.276L73 15.7236C73 11.2142 78.4994 9.00901 81.6148 12.2692L225.699 163.046Z"
+                        fill="url(#blueGradient)" />
+                    <path
+                        d="M159.828 163.593C161.615 165.513 161.615 168.487 159.828 170.407L74.9096 261.621C71.8152 264.945 66.25 262.756 66.25 258.214L66.25 75.7855C66.25 71.2443 71.8152 69.0548 74.9096 72.3785L159.828 163.593Z"
+                        fill="#101828" />
+                    <path
+                        d="M331.968 316.892C330.048 320.522 324.86 320.522 323.066 316.892L175.016 17.4241C173.371 14.0976 175.856 10.148 179.593 10.148L486.041 10.148C489.778 10.148 492.126 14.0976 490.366 17.4241L331.968 316.892Z"
+                        fill="url(#blueGradient)" />
+                    <path
+                        d="M333.104 203.369C331.207 207.091 325.901 207.091 324.132 203.369L231.218 7.8272C229.639 4.50507 232.124 0.619735 235.828 0.619735L428.403 0.619735C432.106 0.619735 434.457 4.50507 432.764 7.8272L333.104 203.369Z"
+                        fill="#101828" />
+                </svg>
+
+
                 <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">DevCode</span>
             </a>
             <div class="flex md:order-2 space-x-4 items-center">
@@ -613,7 +641,7 @@
         </button>
     </div>
 
-    <!-- Contacto -->
+    <!--! Contacto -->
     <section id="contacto" class="py-20 px-6 md:px-12 max-w-7xl mx-auto relative overflow-hidden">
         <!-- Efecto de fondo sutil -->
         <div
@@ -739,7 +767,7 @@
             </div>
         </div>
     </section>
-    <!-- Footer -->
+    <!--! Footer -->
     <footer class="bg-gray-900 border-t border-gray-800 relative overflow-hidden">
         <!-- Efecto de fondo sutil -->
         <div
@@ -866,7 +894,7 @@
         </button>
     </footer>
 
-    <!-- Inicialización de Swiper -->
+    <!--! Inicialización de Swiper -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
     <script src="script.js"></script>
