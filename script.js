@@ -185,16 +185,16 @@ document.addEventListener("DOMContentLoaded", function () {
   if (contactForm) {
     contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
-      
+
       // Deshabilitar el botón de envío
       const submitBtn = contactForm.querySelector('button[type="submit"]');
       const originalBtnText = submitBtn.innerHTML;
       submitBtn.disabled = true;
       submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Enviando...';
-      
+
       // Obtener los datos del formulario
       const formData = new FormData(contactForm);
-      
+
       try {
         // Enviar el formulario a Formspree
         const response = await fetch(contactForm.action, {
@@ -204,7 +204,7 @@ document.addEventListener("DOMContentLoaded", function () {
             'Accept': 'application/json'
           }
         });
-        
+
         // Manejar la respuesta
         if (response.ok) {
           // Éxito: mostrar mensaje de éxito
@@ -223,7 +223,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Restaurar el botón
         submitBtn.disabled = false;
         submitBtn.innerHTML = originalBtnText;
-        
+
         // Desvanecer el mensaje después de 5 segundos
         setTimeout(() => {
           formStatus.style.opacity = '0';
